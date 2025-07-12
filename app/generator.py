@@ -6,7 +6,7 @@ from groq import Groq
 
 load_dotenv()
 
-# You should set your OpenAI key as env var or .env
+
 groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def generate_answer(query, retrieved_chunks):

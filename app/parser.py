@@ -10,7 +10,7 @@ def extract_text_from_txt(file_path):
 def extract_text_from_md(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         html = markdown.markdown(f.read())
-        return html  # Optional: strip tags if needed
+        return html 
 
 def extract_text_from_pdf(file_path):
     text = ""

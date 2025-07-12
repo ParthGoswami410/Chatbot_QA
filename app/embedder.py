@@ -25,11 +25,11 @@ def build_embeddings(documents):
 
     vectors_np = np.array(vectors).astype('float32')
 
-    # Save to FAISS
+    
     index = faiss.IndexFlatL2(vectors_np.shape[1])
     index.add(vectors_np)
     faiss.write_index(index, VECTOR_DB_PATH)
 
-    # Save metadata
+   
     with open(METADATA_STORE_PATH, 'w', encoding='utf-8') as f:
         json.dump(metadata, f, indent=2)
